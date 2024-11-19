@@ -2,6 +2,10 @@ const slider = document.querySelector(".slider");
 const sliderLevel = document.querySelector(".level");
 const cardLogo = document.querySelector(".cardLogo");
 const hp = document.querySelector(".hp");
+const spellSelect = document.querySelector(".spellSelect");
+const levelSlider =  document.querySelector(".levelSlider");
+const levelValue = document.querySelector(".levelValue");
+const damageResult = document.querySelector(".damageResult");
 const imageMap = {
     16: "/image/townhalls/townhall_16_logo.webp",
     15: "/image/townhalls/townhall_15_logo.webp",
@@ -53,7 +57,7 @@ const spellsAndEquipments = [
             {level: 8, damage: 480},
             {level: 9, damage: 560},
             {level: 10, damage: 600},
-            {level: 11, damage: 640},
+            {level: 11, damage: 640}
         ]
     },
 
@@ -64,7 +68,7 @@ const spellsAndEquipments = [
             {level: 2, damage: 0.17},
             {level: 3, damage: 0.21},
             {level: 4, damage: 0.25},
-            {level: 5, damage: 0.29},
+            {level: 5, damage: 0.29}
         ]
     },
 
@@ -88,9 +92,43 @@ const spellsAndEquipments = [
             {level: 15, damage: 1750},
             {level: 16, damage: 1750},
             {level: 17, damage: 1750},
-            {level: 18, damage: 1950},
+            {level: 18, damage: 1950}
         ]
+    },
+
+    {
+        name: "Fireball",
+        levels:  [
+            {level: 1, damage: 1500},
+            {level: 2, damage: 1500},
+            {level: 3, damage: 1700},
+            {level: 4, damage: 1700},
+            {level: 5, damage: 1800},
+            {level: 6, damage: 1950},
+            {level: 7, damage: 1950},
+            {level: 8, damage: 2050},
+            {level: 9, damage: 2200},
+            {level: 10, damage: 2200},
+            {level: 11, damage: 2350},
+            {level: 12, damage: 2650},
+            {level: 13, damage: 2650},
+            {level: 14, damage: 2750},
+            {level: 15, damage: 3100},
+            {level: 16, damage: 3100},
+            {level: 17, damage: 3250},
+            {level: 18, damage: 3400},
+            {level: 19, damage: 3400},
+            {level: 20, damage: 3500},
+            {level: 21, damage: 3650},
+            {level: 22, damage: 3650},
+            {level: 23, damage: 3750},
+            {level: 24, damage: 3900},
+            {level: 25, damage: 3900},
+            {level: 26, damage: 3950},
+            {level: 27, damage: 4100}
+        ],
     }
+
 ];
 
 slider.oninput =  function() {
@@ -101,3 +139,34 @@ slider.oninput =  function() {
         hp.textContent = hpMap[this.value]
     }
 };
+
+function getSpellDamage(spellName, level) {
+    const spell = spellsAndEquipments.find(spell=>  spell.name === spellName);
+    const levelData = spell.levels.find(l => l.level === level);
+    return  levelData ? levelData.damage : null;
+}
+
+function updateDamage() {
+    const selectedSpellName  = spellSelect.value;
+    const selectedLevel = parseInt(levelSlider.value);
+    const spell = spellsAndEquipments.find(spell => spell.name === selectedSpellName);
+    
+    if(spell) {
+        const spellLevel = spell.levels.find(level => level.level === selectedLevel);
+        if(spellLevel) {
+            damageResult.textContent = spellLevel.damage;
+        } else {
+            damageResult.textContent = "Level not found"
+        }
+    }
+
+
+}
+
+spellSelect.addEventListener("change", updateDamage);
+levelSlider.addEventListener("input", () => {
+    levelValue.textContent = levelSlider.value;
+    updateDamage();
+});
+
+updateDamage()
