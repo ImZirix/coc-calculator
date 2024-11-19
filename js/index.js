@@ -147,20 +147,21 @@ function getSpellDamage(spellName, level) {
 }
 
 function updateDamage() {
-    const selectedSpellName  = spellSelect.value;
+    const selectedSpellName = spellSelect.value;
     const selectedLevel = parseInt(levelSlider.value);
     const spell = spellsAndEquipments.find(spell => spell.name === selectedSpellName);
     
-    if(spell) {
-        const spellLevel = spell.levels.find(level => level.level === selectedLevel);
-        if(spellLevel) {
-            damageResult.textContent = spellLevel.damage;
-        } else {
-            damageResult.textContent = "Level not found"
-        }
+    if (!spell) {
+        damageResult.textContent = "Spell not found.";
+        return;
     }
 
-
+    const spellLevel = spell.levels.find(level => level.level === selectedLevel);
+    if (spellLevel) {
+        damageResult.textContent = spellLevel.damage;
+    } else {
+        damageResult.textContent = "Level not found.";
+    }
 }
 
 spellSelect.addEventListener("change", updateDamage);
