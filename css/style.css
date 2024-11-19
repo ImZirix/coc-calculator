@@ -5,6 +5,7 @@
     --background-color: #164A41;
     --text-color: #FFFFFF;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -15,3 +16,59 @@ body {
     font-family: Poppins, sans-serif;
 }
 
+.cardLogo {
+    width: 100px;
+    height: 120px;
+}
+
+.cardisc, .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heartIcon {
+    position: relative;
+    top: 5px;
+}
+
+.slider {
+    -webkit-appearance: none;  /* Remove default appearance */
+    appearance: none;  /* Remove default appearance */
+    width: 100%;  /* Make the slider stretch to the width of the container */
+    height: 8px;  /* Set the height of the slider */
+    border-radius: 5px;  /* Round the edges of the slider */
+    background: var(--secondary-color);  /* Background color for the slider track */
+    outline: none;  /* Remove the focus outline */
+    transition: background 0.3s ease-in-out;  /* Smooth transition for hover and focus states */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;  /* Remove default thumb appearance */
+    appearance: none;  /* Remove default thumb appearance */
+    width: 20px;  /* Set thumb width */
+    height: 20px;  /* Set thumb height */
+    border-radius: 50%;  /* Make the thumb circular */
+    background: var(--primary-color);  /* Primary color for the thumb */
+    cursor: pointer;  /* Show pointer cursor on hover */
+    transition: background 0.3s ease-in-out;  /* Smooth transition for thumb */
+}
+
+input[type="range"]:hover::-webkit-slider-thumb,
+input[type="range"]:focus::-webkit-slider-thumb {
+    background: var(--accent-color);
+}
+
+input[type="range"]:hover,
+input[type="range"]:focus {
+    background: var(--primary-color);
+}
+
+.range-value {
+    font-family: Poppins, sans-serif;
+    color: var(--text-color);
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+}
