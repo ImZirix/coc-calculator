@@ -33,26 +33,26 @@ body {
     top: 5px;
 }
 
-.slider {
-    -webkit-appearance: none;  /* Remove default appearance */
-    appearance: none;  /* Remove default appearance */
-    width: 100%;  /* Make the slider stretch to the width of the container */
-    height: 8px;  /* Set the height of the slider */
-    border-radius: 5px;  /* Round the edges of the slider */
-    background: var(--secondary-color);  /* Background color for the slider track */
-    outline: none;  /* Remove the focus outline */
-    transition: background 0.3s ease-in-out;  /* Smooth transition for hover and focus states */
+.slider, .levelSlider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background: var(--secondary-color);
+    outline: none;
+    transition: background 0.3s ease-in-out;
 }
 
 input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;  /* Remove default thumb appearance */
-    appearance: none;  /* Remove default thumb appearance */
-    width: 20px;  /* Set thumb width */
-    height: 20px;  /* Set thumb height */
-    border-radius: 50%;  /* Make the thumb circular */
-    background: var(--primary-color);  /* Primary color for the thumb */
-    cursor: pointer;  /* Show pointer cursor on hover */
-    transition: background 0.3s ease-in-out;  /* Smooth transition for thumb */
+    -webkit-appearance: none;  
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
 }
 
 input[type="range"]:hover::-webkit-slider-thumb,
@@ -71,4 +71,89 @@ input[type="range"]:focus {
     text-align: center;
     font-size: 16px;
     margin-top: 10px;
+}
+
+select {
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+select:focus {
+    outline: none;
+    border-color: #EA3323;
+}
+
+
+select::-ms-expand {
+    display: none;
+}
+
+select::after {
+    content: '▼';
+    font-size: 14px;
+    color: #333;
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    pointer-events: none;
+}
+
+option {
+    padding: 10px;
+    font-size: 16px;
+}
+
+option:hover {
+    background-color: #f0f0f0;
+    color: #EA3323;
+}
+
+select {
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+select:focus {
+    outline: none;
+    border-color: #EA3323;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select::after {
+    content: '▼';
+    font-size: 14px;
+    color: #333;
+    position: absolute;
+    right: 15px;
+    top: 12px;
+    pointer-events: none;
+}
+
+option {
+    padding: 10px;
+    font-size: 16px;
+}
+
+option:hover {
+    background-color: #f0f0f0;
+    color: #EA3323;
 }
