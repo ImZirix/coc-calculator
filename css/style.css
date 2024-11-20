@@ -23,9 +23,9 @@ body {
 
 .cardisc, .card {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .heartIcon {
@@ -156,4 +156,48 @@ option {
 option:hover {
     background-color: #f0f0f0;
     color: #EA3323;
+}
+
+#newCardBtn {
+    width: 70px; 
+    height: 70px;             
+    background-color: #4CAF50;   
+    color: white;             
+    font-size: 48px;         
+    font-weight: bold;           
+    border: none;               
+    border-radius: 50%;      
+    display: flex;             
+    justify-content: center;    
+    align-items: center;         
+    cursor: pointer;           
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+#newCardBtn:hover {
+    background-color: #45a049;   
+    transform: scale(1.1);        
+}
+
+#newCardBtn:focus {
+    outline: none;               
+}
+
+.newCardBtnCon {
+    padding: 10px 15px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card {
+    border-radius: 10px;
+    
 }
