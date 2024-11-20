@@ -9,31 +9,36 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <script src="js/index.js" defer></script>
+    <script src="js/index.js" type="module" defer></script>  
 </head>
 <body>
-    <div class="card">
-        <div class="cardisc">
-            <img src="image/townhalls/townhall_16_logo.webp" alt="townhall 16 logo" class="cardLogo">
-            <div class="cardName">Town Hall <span class="level">16</span><svg class="heartIcon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#EA3323"><path d="M480-228q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107t158 147.5Zm0-273z"/></svg><span class="hp">10000</span></div>
-        </div>
-        <div class="sliderContainer">
-            <input type="range" class="slider" value="16" min="1" max="16" step="1">
-        </div>
-        <div class="optionsContainer">
-            <label for="options">Select Spell:</label>
-            <select class="spellSelect">
-                <option value="Lightning">Lightning</option>
-                <option value="Fireball">Fireball</option>
-                <option value="GiantArrow">GiantArrow</option>
-                <option value="Earthquake">Earthquake</option>
-            </select>
-        </div>
-        <div class="levelContainer">
-            <label for="levels">Selected Level:</label>
-            <span class="levelValue">1</span>
-            <input type="range" class="levelSlider" min="1" max="27" step="1" value="1">
-            <p>Damage: <span class="damageResult">0</span></p>
+    <div class="main">
+        <div class="card">
+            <div class="cardisc">
+                <img src="image/townhalls/townhall_16_logo.webp" alt="townhall 16 logo" class="cardLogo">
+                <div class="cardName">Town Hall <span class="level">16</span><svg class="heartIcon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#EA3323"><path d="M480-228q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107t158 147.5Zm0-273z"/></svg><span class="hp">10000</span></div>
+            </div>
+            <div class="sliderContainer">
+                <input type="range" class="slider" value="16" min="1" max="16" step="1">
+            </div>
+            <div class="optionsContainer">
+                <label for="options">Select Spell:</label>
+                <select class="spellSelect">
+                    <option value="Lightning">Lightning</option>
+                    <option value="Fireball">Fireball</option>
+                    <option value="GiantArrow">GiantArrow</option>
+                    <option value="Earthquake">Earthquake</option>
+                </select>
+            </div>
+            <div class="levelContainer">
+                <label for="levels">Selected Level:</label>
+                <span class="levelValue">1</span>
+                <input type="range" class="levelSlider" min="1" max="27" step="1" value="1">
+                <p>Damage: <span class="damageResult">0</span></p>
+            </div>
+            <div class="newCardBtnCon">
+                <button id="newCardBtn">+</button>
+            </div>
         </div>
     </div>
 </body>
