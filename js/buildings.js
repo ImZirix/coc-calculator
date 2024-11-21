@@ -34,6 +34,7 @@ export const buildings = {
             { level: 4, health: 5200, image: "/image/artillery/artillery_4_logo.webp" },
             { level: 5, health: 5600, image: "/image/artillery/artillery_5_logo.webp" },
             { level: 6, health: 5900, image: "/image/artillery/artillery_6_logo.webp" },
+<<<<<<< HEAD
             { level: 7, health: 6200, image: "/image/artillery/artillery_7_logo.webp" }
         ]
     },
@@ -51,6 +52,9 @@ export const buildings = {
             { level: 1, health: 2500, image: "/image/spelltower/spelltower_1_logo.webp" },
             { level: 2, health: 2800, image: "/image/spelltower/spelltower_2_logo.webp" },
             { level: 3, health: 3100, image: "/image/spelltower/spelltower_3_logo.webp" }
+=======
+            { level: 7, health: 6200, image: "/image/artillery/artillery_6_logo.webp" }
+>>>>>>> 195aaf17c5b7644a28ec31d502fdeb9c453795fb
         ]
     }
 };
