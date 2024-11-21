@@ -12,8 +12,24 @@
     <script src="js/index.js" type="module" defer></script>  
 </head>
 <body>
+    <nav>
+        <div class="loadout">
+            <li><img src="image/fireball.webp" class="fireball">
+                <input type="range" class="slider" id="fireballS" value="1" max="27" min="1" step="1">
+                <p class="dmgF">Level: 1 <br> Damage: 700 </p></li>
+            <li><img src="image/gaintarrow.webp" class="giantArrow">
+                <input type="range" class="slider" id="giantarrowS" value="1" max="18" min="1" step="1">
+                <p class="dmgA">Level: 1 <br> Damage: 700 </p></li>
+            <li><img src="image/earthquake.webp" class="eq">
+                <input type="range" class="slider" id="eqS" value="1" max="5" min="1" step="1">
+                <p class="dmgE">Level: 1 <br> Damage: 0.14 </p></li>
+            <li><img src="image/zap.webp" class="zap">
+                <input type="range" class="slider" id="zapS" value="1" max="11" min="1" step="1">
+                <p class="zapP">Level: 1 <br> Damage: 150 </p></li>
+        </div>
+    </nav>
     <div class="main">
-        <div class="card">
+        <!-- <div class="card">
             <div class="cardisc">
                 <img src="image/townhalls/townhall_16_logo.webp" alt="townhall 16 logo" class="cardLogo">
                 <div class="cardName">Town Hall <span class="level">16</span><svg class="heartIcon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#EA3323"><path d="M480-228q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107t158 147.5Zm0-273z"/></svg><span class="hp">10000</span></div>
@@ -35,11 +51,9 @@
                 <span class="levelValue">1</span>
                 <input type="range" class="levelSlider" min="1" max="27" step="1" value="1">
                 <p>Damage: <span class="damageResult">0</span></p>
-            </div>
-            <div class="newCardBtnCon">
-                <button id="newCardBtn">+</button>
-            </div>
+            </div> -->
         </div>
+        <button id="newCardBtn">+</button>
     </div>
 </body>
 </html>
