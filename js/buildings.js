@@ -34,7 +34,23 @@ export const buildings = {
             { level: 4, health: 5200, image: "/image/artillery/artillery_4_logo.webp" },
             { level: 5, health: 5600, image: "/image/artillery/artillery_5_logo.webp" },
             { level: 6, health: 5900, image: "/image/artillery/artillery_6_logo.webp" },
-            { level: 7, health: 6200, image: "/image/artillery/artillery_6_logo.webp" }
+            { level: 7, health: 6200, image: "/image/artillery/artillery_7_logo.webp" }
+        ]
+    },
+    scattershot: {
+        stats: [
+            { level: 1, health: 3600, image: "/image/scattershot/scattershot_1_logo.webp" },
+            { level: 2, health: 4200, image: "/image/scattershot/scattershot_2_logo.webp" },
+            { level: 3, health: 4800, image: "/image/scattershot/scattershot_3_logo.webp" },
+            { level: 4, health: 5100, image: "/image/scattershot/scattershot_4_logo.webp" },
+            { level: 5, health: 5410, image: "/image/scattershot/scattershot_5_logo.webp" }
+        ]
+    },
+    spellTower: {
+        stats: [
+            { level: 1, health: 2500, image: "/image/spelltower/spelltower_1_logo.webp" },
+            { level: 2, health: 2800, image: "/image/spelltower/spelltower_2_logo.webp" },
+            { level: 3, health: 3100, image: "/image/spelltower/spelltower_3_logo.webp" }
         ]
     }
 };
